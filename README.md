@@ -77,13 +77,21 @@ Project Planning
             avg exam time: <int>
         }
     ```
-    - Simulation config:
-    ```
+    - Simulation instance:
+    ```    
         {
+            CT techs: <list of CT tech instance classes>
+            Scanner Asignmenst: {
+                    ED scanner: Tech 1,
+                    Inpatient scanner 1: Tech 2
+                }
             Transport staff volume: <int>
             avg exam volume: <int>
+            Simulation duration: <int>
         }
-    ```       
+    ```
+
+    
 - web vs local interface:
     - local probably works better since there's no need for user profiles. all workflow parameters should be configurable (delay points and staff volumes and exam/patient volume)
     - web interface could be better in the future to accomodate user profiles where workflow parameters are saved and associated to the relevant user 
@@ -96,3 +104,8 @@ Project Planning
 - possible volume and delay configuration solutions:
     - local config file
     - python class
+
+# Iinitial Tasks
+
+Given an simulation instance, return the average **exam completion** and **highest number of exams completed**
+
