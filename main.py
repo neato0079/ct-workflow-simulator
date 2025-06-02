@@ -36,3 +36,17 @@ class Siumulation:
         self.exam_vol = exam_vol
         self.avg_exam_dur = avg_exam_dur
         self.sim_dur = sim_dur
+
+    def avg_simulated_exam_dur(self):
+        '''
+        Given an exam volume, consider the CT techs' performance and scanner assignments and return the average simulated exam duration
+        '''
+
+    def most_exams_completed(self):
+        '''
+        Given a simulation duration, consider the CT techs' performance and scanner assignments and return the highest number of exams completed
+        '''
+
+
+    def run(self):
+        pass
