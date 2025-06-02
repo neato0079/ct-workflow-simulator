@@ -1,4 +1,5 @@
 from datetime import timedelta
+from params import CT_tech
 
 
 class Simulator:
@@ -14,7 +15,7 @@ class Simulator:
     '''
     def __init__(
             self,
-            ct_techs:list,
+            ct_techs:list[CT_tech],
             scnr_asgnmnts:dict,
             trnsprt_vol:int,
             exam_vol:int,
