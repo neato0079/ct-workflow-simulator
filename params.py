@@ -17,12 +17,37 @@ class CT_tech:
         self.lag_weight = lag_weight
 
 
+# do we need this though
 class Study_type:
     def __init__(self, ED_patient:bool = True, trauma_lvl: int = 0, code_stroke:bool = False):
         self.ED_patient = ED_patient
-        self.trauma_lvl = trauma_lvl
+        self.trauma_lvl = trauma_lvl # 0 - 3. 0 indicates no truama
         self.code_stroke = code_stroke
         pass
+
+class Study_volume:
+    def __init__(
+            self, 
+            inpatient:int,
+            ED:int,
+            trauma1:int,
+            trauma2:int,
+            trauma3:int
+            ):
+        self.inpatient = inpatient
+        self.ED = ED
+        self.trauma1 = trauma1
+        self.trauma2 = trauma2
+        self.trauma3 = trauma3
+        
+    # do we need this though
+    def populate(self):
+        '''
+        Use instance volumes to create the appropriate number of relevant classes
+        '''
+        inpatients = []
+        for i in range(len(self.inpatient)):
+            inpatient_class = Study_type(ED_patient=False) 
 
 # class Scanner_type:
 #     def __init__(self, ED_proximity:int) -> None:
