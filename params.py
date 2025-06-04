@@ -18,14 +18,14 @@ class CT_tech:
 
 
 # do we need this though
-class Study_type:
+class Exam_type:
     def __init__(self, ED_patient:bool = True, trauma_lvl: int = 0, code_stroke:bool = False):
         self.ED_patient = ED_patient
         self.trauma_lvl = trauma_lvl # 0 - 3. 0 indicates no truama
         self.code_stroke = code_stroke
         pass
 
-class Study_volume:
+class Exam_vol:
     def __init__(
             self, 
             inpatient:int,
@@ -39,7 +39,7 @@ class Study_volume:
         self.trauma1 = trauma1
         self.trauma2 = trauma2
         self.trauma3 = trauma3
-        
+
     # do we need this though
     def populate(self):
         '''
@@ -47,7 +47,7 @@ class Study_volume:
         '''
         inpatients = []
         for i in range(len(self.inpatient)):
-            inpatient_class = Study_type(ED_patient=False) 
+            inpatient_class = Exam_type(ED_patient=False) 
 
 # class Scanner_type:
 #     def __init__(self, ED_proximity:int) -> None:
