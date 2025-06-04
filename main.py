@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # set parameters for simulator class
     tech1 = CT_tech(0.1)
     tech2 = CT_tech(0.3)
-    slow_tech = CT_tech(0, 0.2)
+    slow_tech = CT_tech(0, 0.3)
     ct_techs = [tech1, slow_tech]
 
     sim_params = {
@@ -28,3 +28,5 @@ if __name__ == "__main__":
     print(sim1.set_sim_exam_dur())
     print(f'total number of exams completed in {sim1.sim_dur} hours:')
     print(sim1.most_exams_completed())
+    print('Total number of CT techs:')
+    print(sim1.show_configs())

@@ -15,3 +15,8 @@ class CT_tech:
     def __init__(self, eff_wght:float = 0, lag_weight:float = 0):
         self.eff_wght = eff_wght
         self.lag_weight = lag_weight
+
+
+class Study_type:
+    def __init__(self):
+        pass
