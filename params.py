@@ -30,15 +30,16 @@ class Exam_vol:
             self, 
             inpatient:int,
             ED:int,
-            trauma1:int,
-            trauma2:int,
-            trauma3:int
+            trauma1:int = 0,
+            trauma2:int = 0,
+            trauma3:int = 0
             ):
         self.inpatient = inpatient
         self.ED = ED
         self.trauma1 = trauma1
         self.trauma2 = trauma2
         self.trauma3 = trauma3
+        self.total = sum([inpatient, ED, trauma1, trauma2, trauma3])
 
     # do we need this though
     def populate(self):
