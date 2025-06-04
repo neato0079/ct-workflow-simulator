@@ -20,7 +20,9 @@ class Simulator:
             trnsprt_vol:int,
             exam_vol:int,
             avg_exam_dur:timedelta, # this is temporary. studies should have their own class where duration is declared
-            sim_dur:timedelta # seconds
+            sim_dur:timedelta, # seconds
+            trnsprt_delay_inpatient:timedelta,
+            trnsprt_delay_ED:timedelta,
             ) -> None:
         
         self.ct_techs = ct_techs
@@ -28,7 +30,12 @@ class Simulator:
         self.trnsprt_vol = trnsprt_vol
         self.exam_vol = exam_vol
         self.avg_exam_dur = avg_exam_dur
+
+        # delays
         self.sim_dur = sim_dur
+        self.trnsprt_delay_inpatient = trnsprt_delay_inpatient
+        self.trnsprt_delay_ED = trnsprt_delay_ED
+        self.total_exam_delay = timedelta(seconds=0)
 
     def set_sim_exam_dur(self) -> timedelta:
         '''
@@ -59,6 +66,7 @@ class Simulator:
         '''
         Consider transport times and add that to the exam duration
         '''
+
 
     def show_configs(self):
         '''

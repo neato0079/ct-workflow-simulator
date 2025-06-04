@@ -19,7 +19,9 @@ if __name__ == "__main__":
         'trnsprt_vol': 5,
         'exam_vol': 4,
         'avg_exam_dur': timedelta(seconds=420),
-        'sim_dur': timedelta(hours=4)
+        'sim_dur': timedelta(hours=4),
+        'trsnprt_delay_inpatient': timedelta(minutes=20),
+        'trnsprt_delay_ED': timedelta(minutes=5)
     }
 
     sim1 = Simulator(**sim_params)

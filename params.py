@@ -18,5 +18,14 @@ class CT_tech:
 
 
 class Study_type:
-    def __init__(self):
+    def __init__(self, ED_patient:bool = True, trauma_lvl: int = 0, code_stroke:bool = False):
+        self.ED_patient = ED_patient
+        self.trauma_lvl = trauma_lvl
+        self.code_stroke = code_stroke
+        pass
+
+class Scanner_type:
+    def __init__(self, ED_proximity:int) -> None:
+        self.ED_proximity = ED_proximity
+        
         pass
