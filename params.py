@@ -24,8 +24,7 @@ class Study_type:
         self.code_stroke = code_stroke
         pass
 
-class Scanner_type:
-    def __init__(self, ED_proximity:int) -> None:
-        self.ED_proximity = ED_proximity
-        
-        pass
+# class Scanner_type:
+#     def __init__(self, ED_proximity:int) -> None:
+#         self.ED_proximity = ED_proximity
+#         pass
