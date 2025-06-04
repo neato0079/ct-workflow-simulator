@@ -43,7 +43,7 @@ class Simulator:
 
         # loop through ct_techs and apply lag_wght to avg_exam_dur
         for tech in self.ct_techs:
-            duration_increase = self.simulated_exam_duration * tech.eff_wght
+            duration_increase = self.simulated_exam_duration * tech.lag_weight
             self.simulated_exam_duration = self.simulated_exam_duration + (duration_increase)
 
         return self.simulated_exam_duration
@@ -59,6 +59,13 @@ class Simulator:
         '''
         Consider transport times and add that to the exam duration
         '''
+
+    def show_configs(self):
+        '''
+        Return configs for simulator instance
+        '''
+        num_techs = len(self.ct_techs)
+        return num_techs
 
     def run(self):
         pass
