@@ -9,7 +9,7 @@ if __name__ == "__main__":
     tech1 = CT_tech()
     tech2 = CT_tech()
     slow_tech = CT_tech(0, 0.3)
-    ct_techs = [tech1]
+    ct_techs = [tech1,tech2]
 
     sim_params = {
         'name': 'sim1',
@@ -19,7 +19,7 @@ if __name__ == "__main__":
             'inpatient': tech2
             },
         'trnsprt_vol': 5,
-        'exam_vol': Exam_vol(0,20),
+        'exam_vol': Exam_vol(10,25),
         'avg_exam_dur': timedelta(seconds=420),
         'sim_dur': timedelta(hours=4),
         'trnsprt_delay_inpatient': timedelta(minutes=12),
@@ -42,7 +42,7 @@ if __name__ == "__main__":
             'inpatient': tech2
             },
         'trnsprt_vol': 5,
-        'exam_vol': Exam_vol(0,20),
+        'exam_vol': Exam_vol(10,25),
         'avg_exam_dur': timedelta(seconds=420),
         'sim_dur': timedelta(hours=4),
         'trnsprt_delay_inpatient': timedelta(minutes=12),

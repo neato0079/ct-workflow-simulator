@@ -69,8 +69,9 @@ class Simulator:
         '''
         Consider transport times and add that to the exam duration
         '''
-        self.gen_trnsprt_delay += self.exam_vol.ED * self.trnsprt_delay_ED
-        self.gen_trnsprt_delay += self.exam_vol.inpatient * self.trnsprt_delay_inpatient
+        self.ed_transp_delay = self.exam_vol.ED * self.trnsprt_delay_ED
+        self.inpt_transp_delay = self.exam_vol.inpatient * self.trnsprt_delay_inpatient
+        self.gen_trnsprt_delay = self.inpt_transp_delay + self.ed_transp_delay
 
         return self.gen_trnsprt_delay // self.exam_vol.total
 
@@ -91,6 +92,7 @@ class Simulator:
         print(f'Number of techs: {num_techs}')
         print(f'Avgerage exam duration: {avg_exam_dur}')
         print(f'Avgerage exam duration with transport: {avg_exam_dur_with_trnsprt}')
+
         print(f'Total number of exams {num_exams}')
         print(f'Total exam completion time: {total_exam_time}')
         print(f'\n\n')
