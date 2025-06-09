@@ -12,7 +12,7 @@ class CT_tech:
             0.0 = no lag time so no change to exam duration
             1.0 = so much lag that the exam duration doubles
     '''
-    def __init__(self, eff_wght:float = 0, lag_weight:float = 0):
+    def __init__(self, eff_wght:float = 0.1, lag_weight:float = 0):
         self.eff_wght = eff_wght
         self.lag_weight = lag_weight
 

@@ -15,6 +15,7 @@ class Simulator:
     '''
     def __init__(
             self,
+            name:str,
             ct_techs:list[CT_tech],
             scnr_asgnmnts:dict,
             trnsprt_vol:int,
@@ -25,6 +26,7 @@ class Simulator:
             trnsprt_delay_ED:timedelta,
             ) -> None:
         
+        self.name = name
         self.ct_techs = ct_techs
         self.scnr_asgnmnts = scnr_asgnmnts
         self.trnsprt_vol = trnsprt_vol
@@ -85,7 +87,13 @@ class Simulator:
         avg_exam_dur_with_trnsprt = self.total_exam_delay
         num_exams = self.exam_vol.total
         total_exam_time = num_exams * avg_exam_dur_with_trnsprt
-        print(f'Number of techs: {num_techs}\n\nAvgerage exam duration: {avg_exam_dur}\n\nAvgerage exam duration with transport: {avg_exam_dur_with_trnsprt}\n\nTotal number of exams {num_exams}\n\nTotal exam completion time: {total_exam_time}')
+
+        print(f'Number of techs: {num_techs}')
+        print(f'Avgerage exam duration: {avg_exam_dur}')
+        print(f'Avgerage exam duration with transport: {avg_exam_dur_with_trnsprt}')
+        print(f'Total number of exams {num_exams}')
+        print(f'Total exam completion time: {total_exam_time}')
+        print(f'\n\n')
 
     def run(self):
         pass
