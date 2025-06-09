@@ -26,12 +26,9 @@ if __name__ == "__main__":
         'trnsprt_delay_ED': timedelta(minutes=5)
     }
 
+    # CREATE SIMULATION, APPLY DELAYS, AND SHOW SIMULATOR CONFIGS
     sim1 = Simulator(**sim_params)
-
     print(f'avg exam time in seconds: {sim1.apply_all_delays()}')
-
-    # print(f'total number of exams completed in {sim1.sim_dur} hours:')
-    # print(sim1.most_exams_completed())
     sim1.print_configs()
 
     # set parameters for simulator class
@@ -51,10 +48,10 @@ if __name__ == "__main__":
         'trnsprt_delay_inpatient': timedelta(minutes=12),
         'trnsprt_delay_ED': timedelta(minutes=5)
     }
-
+    # CREATE SIMULATION, APPLY DELAYS, AND SHOW SIMULATOR CONFIGS
     sim2 = Simulator(**sim_params2)
     print(f'avg exam time: {sim2.apply_all_delays()}')
-
     sim2.print_configs()
 
+    # MAKE COMPARISONS BETWEEN SIMULATIONS
     compare(sim1, sim2)

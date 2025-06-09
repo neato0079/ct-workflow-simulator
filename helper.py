@@ -1,5 +1,4 @@
 from simulator import Simulator
-# from datetime import timedelta
 
 def compare(sim1:Simulator, sim2:Simulator) -> None:
     name1 = sim1.name
@@ -15,5 +14,5 @@ def compare(sim1:Simulator, sim2:Simulator) -> None:
 
     print(f'Avgerage exam duration with transport {name1} vs {name2}: {sim1.total_exam_delay} -> {sim2.total_exam_delay}')
     print(f'Delta:{sim1.total_exam_delay - sim2.total_exam_delay}')
-    
+
     return
