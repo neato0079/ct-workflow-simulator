@@ -7,9 +7,9 @@ if __name__ == "__main__":
 
     # set parameters for simulator class
     tech1 = CT_tech()
-    tech2 = CT_tech()
+    tech2 = CT_tech(0.5)
     slow_tech = CT_tech(0, 0.3)
-    ct_techs = [tech1,tech2]
+    ct_techs = [tech1,slow_tech]
 
     sim_params = {
         'name': 'sim1',
